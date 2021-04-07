@@ -10,10 +10,10 @@ public class EnemySetting : MonoBehaviour
     public int atk = 2; //敵人攻擊力，初始為2
     public int def = 0; //敵人防禦力，初始為0
     public int health = 100;    //敵人生命值，初始為100
+    public int firePower = 55;
 
     //敵人預設速度(常數)、當前速度(變數)
     private float initialSpeed, currnetSpeed = 1.0f;
-    private bool attacking = false;
     public float InitialSpeed
     {
         get { return initialSpeed; }
@@ -23,11 +23,6 @@ public class EnemySetting : MonoBehaviour
     {
         get { return currnetSpeed; }
         set { currnetSpeed = value; }
-    }
-    public bool Attacking
-    {
-        get { return attacking; }
-        set { attacking = value; }
     }
 
     private void Start()
@@ -51,22 +46,19 @@ public class EnemySetting : MonoBehaviour
     //接觸到barriers就停下
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        currnetSpeed = 0.0f;
         if (collision.tag == "Barriers")
-        {
-            attacking = true;
-        }
+            currnetSpeed = 0.0f;
     }
 
     //離開barriers就照原速度繼續前進
     private void OnTriggerExit2D(Collider2D collision)
     {
-        currnetSpeed = initialSpeed;
-        attacking = false;
+        if (collision.tag == "Barriers")
+            currnetSpeed = initialSpeed;
     }
 
     private void OnMouseDown()
     {
-        health = health - 80;
+        health = health - (firePower - def);
     }
 }

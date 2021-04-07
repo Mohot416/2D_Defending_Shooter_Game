@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Barriers
+  - Small_Enemy
+  - Middle_Enemy
+  - Giant_Enemy
   layers:
   - Default
   - TransparentFX

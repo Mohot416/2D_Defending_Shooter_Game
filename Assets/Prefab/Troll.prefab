@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 847385932780949992}
   m_Layer: 0
   m_Name: Troll
-  m_TagString: Enemy
+  m_TagString: Small_Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   atk: 2
   def: 0
   health: 100
+  firePower: 55
 --- !u!1 &601029872021414120
 GameObject:
   m_ObjectHideFlags: 0

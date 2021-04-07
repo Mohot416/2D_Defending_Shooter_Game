@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.092459016, g: 0.11838663, b: 0.15265942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8799bb5d2d353a64b971a091d42ef75f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 100
+  HealthPoints: 50
 --- !u!1 &1390599993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,8 +1434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4818dc8810acf840b9053423a89f177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 847385932780949992, guid: 378eacdc9434f4242bd206161ca037dd, type: 3}
-  barriers: {fileID: 1351604962}
 --- !u!1 &1736357757
 GameObject:
   m_ObjectHideFlags: 0
