@@ -39,10 +39,10 @@ public class BarrierStatusController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(small.Num);
         if (HealthPoints <= 0)
         {
             Destroy(gameObject, 0);
+            //Game Over
             return;
         }
         if (IsCoroutine == false)   //防止同時重複過多Coroutine
@@ -57,12 +57,12 @@ public class BarrierStatusController : MonoBehaviour
 
     IEnumerator BeingAttacked(Enemy small, Enemy middle, Enemy giant)
     {
-        Debug.Log("CoroutineTest Start At" + Time.time);
+        //Debug.Log("CoroutineTest Start At" + Time.time);
         //lose health
         HealthPoints = HealthPoints - (small.Atk * small.Num) - (middle.Atk * middle.Num) - (giant.Atk * giant.Num);
         yield return new WaitForSeconds(1f);
         IsCoroutine = false;
-        Debug.Log("CoroutineTest End At" + Time.time);
+        //Debug.Log("CoroutineTest End At" + Time.time);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
